@@ -7,8 +7,8 @@ from PIL import Image
 app = Flask(__name__)
 
 # Endpoints de TensorFlow Serving
-CLASSIFIER_URL = "http://localhost:8502/v1/models/tumor_classifier:predict"
-SEGMENTATION_URL = "http://localhost:8502/v1/models/ResUNet:predict"
+CLASSIFIER_URL = "https://brain-models-v1.onrender.com/v1/models/tumor_classifier:predict"
+SEGMENTATION_URL = "https://brain-models-v1.onrender.com/v1/models/ResUNet:predict"
 
 def preprocess_image(image, is_segmentation=False):
     """Preprocesa la imagen para los modelos."""
